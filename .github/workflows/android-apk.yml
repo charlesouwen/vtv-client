@@ -1,7 +1,7 @@
 name: Android APK
 
-# 占位 workflow：只验证 Flutter 工程能出 release APK。
-# 真正的打包配置（签名、多 ABI、产物上传等）由打包子代理后续补。
+# 构建 release APK 并上传为 Actions 产物，供下载安装。
+# 签名：暂用 debug 签名（未配正式 keystore），仅供测试。
 
 on:
   push:
@@ -28,3 +28,10 @@ jobs:
 
       - run: flutter pub get
       - run: flutter build apk --release
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vtv-client-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
+          if-no-files-found: error
+          retention-days: 30

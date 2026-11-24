@@ -1,1 +1,52 @@
-# test
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+*.dart.js
+*.js.map
+
+# Android
+android/.gradle/
+android/app/build/
+android/build/
+android/*.iml
+android/local.properties
+android/app/*.keystore
+android/app/*.jks
+*.keystore
+*.jks
+key.properties
+**/key.properties
+
+# iOS / macOS (kept for completeness; M1 targets Android/TV/Windows/Linux)
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
+ios/Pods/
+ios/.symlinks/
+macos/Flutter/GeneratedPluginRegistrant.swift
+macos/Flutter/ephemeral/
+**/Pods/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+
+# Windows / Linux
+windows/flutter/ephemeral/
+windows/flutter/generated_plugin_registrant.cc
+linux/flutter/ephemeral/
+linux/flutter/generated_plugin_registrant.cc
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+
+# Misc
+*.log
+*.orig

@@ -1,0 +1,33 @@
+name: vtv_client
+description: "VTV multi-platform client — Flutter + media_kit video aggregator for 411081.xyz (Android / Android TV / Windows / Linux)."
+publish_to: 'none'
+
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.10.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Player: libmpv via media_kit (HEVC capable; Hongguo CENC decryption
+  # is handed to mpv as demuxer-lavf-o decryption_key, see lib/player/).
+  media_kit: ^1.2.6
+  media_kit_video: ^2.0.1
+  media_kit_libs_video: ^1.0.5
+
+  # TV remote (D-pad) focus engine.
+  dpad: 3.3.0
+
+  http: ^1.4.0
+  shared_preferences: ^2.5.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
